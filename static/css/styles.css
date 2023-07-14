@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
-
-*,
-*:before,
-*:after {
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -16,10 +14,8 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    margin: 0;
+    margin: 0; 
     height: 100vh;
-    background-color: #080710;
-    background-color: #080710;
 }
 
 #wrapper {
@@ -27,28 +23,27 @@ body {
     margin: 2.35rem 0 0;
     display: flex;
     justify-content: center;
-
+    
 }
 
 #welcome {
     margin: 0;
     background-color: rgb(0, 0, 0);
 }
-
 #welcome>h1 {
     text-align: center;
     font-family: 'Passions Conflict', cursive;
     font-size: 5rem;
     letter-spacing: 0.1rem;
-    background: linear-gradient(180deg, rgba(165, 195, 250, 1) 17%, rgba(188, 205, 221, 1) 48%, rgba(206, 215, 200, 1) 57%, rgba(246, 236, 153, 1) 69%, rgba(232, 183, 105, 1) 78%);
+    background:linear-gradient(180deg, rgba(165,195,250,1) 17%, rgba(188,205,221,1) 48%, rgba(206,215,200,1) 57%, rgba(246,236,153,1) 69%, rgba(232,183,105,1) 78%);
     color: transparent;
     background-clip: text;
-    -webkit-background-clip: text;
+-webkit-background-clip: text;
 }
 
 .home-container {
     margin: 0px auto 4px 0;
-    height: 1rem;
+    height:1rem;
     display: flex;
     top: 0%;
     left: 50%;
@@ -62,7 +57,7 @@ body {
     position: relative;
     flex: 1;
     margin-top: 10rem;
-
+    
 }
 
 .info>h1 {
@@ -74,116 +69,126 @@ body {
     padding: 0;
     letter-spacing: 0px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(242, 238, 213);
+   color: rgb(242, 238, 213);
 }
 
-.site-content {
+.first-container {
+    width: 25vw;
+    height: 42vh;
+    margin: 30px;
     display: flex;
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    background-color: rgb(198, 180, 107);
+    opacity: 0.95;
+    border-radius: 5px;
+    align-items:center;
+    justify-content:baseline;
+    flex-direction: column;
+    
+}
+
+.first-container > h1 {
+  background-color: rgb(198, 180, 107);
+  opacity: 0.95;
+  padding: 0.25rem 0rem;
+  margin: -1rem ;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 1px solid black;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.container-text {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    
+}
+.container-text> form {
+    padding: 1rem;
+}
+
+.container-text> form > input {
+    width: 13rem;
+    height: 1.5rem;
+    border-radius: 5px;
+
+}
+#complete-reservation {
+    background-color: rgb(198, 180, 107);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 5px;
+    width: 40vw;
+    height: 12vh;
+    margin:40px auto;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    opacity: 0.95;
 }
 
 
-.background {
-    width: 430px;
-    height: 415px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 60%;
-}
-
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.shape:first-child {
-    background: linear-gradient(#36251b, #7c4f30);
-    ;
-    left: -80px;
-    top: -80px;
-}
-
-.shape:last-child {
-    background: linear-gradient(to right, #daa022, #f09819);
-    ;
-    right: -30px;
-    bottom: -80px;
-}
-
-form {
-    height: 520px;
-    width: 400px;
-    background-color: rgba(255, 255, 255, 0.13);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 60%;
-    left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
-}
-
-form * {
-    font-family: 'Poppins', sans-serif;
-    color: #ffffff;
-    letter-spacing: 0.5px;
-    outline: none;
+label {
+    display: block;
+    width: 100%;
+    padding: 0;
     border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1A2250;
 }
 
-form h3 {
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
+#next-btn {
+    display: block;
+    margin-top: 0.6rem;
+    width: 13rem;
+    border-radius: 5px;
+    background-color: rgb(159, 159, 17);
+    font-size:large;
+    font-weight: 700;
+    opacity: 0.9;
+}
+/* .info-list li {
+    margin-top: 3rem;
+    
+} */
+
+li {
+    list-style-type: none;
+}
+
+li > article {
+    margin-top: 2rem;
+    border: 2px solid black;
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+article> h3,p {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.1rem 0.6rem;
+    font-family: 'Alkalami', serif;
+   
+}
+
+.edit-btn, .continue-btn, .confirm-btn, .cancel-btn {
+    margin: 2.6rem 1rem ;
+    width: 6.5rem;
+    border-radius: 5px;
+    background-color: rgb(159, 159, 17);
+    font-size:large;
+    font-weight: 700;
+    opacity: 0.9;
+}
+.reservation-confirmed {
+    color: green;
     text-align: center;
 }
-
-
-::placeholder {
-    color: #e5e5e5;
-}
-
-button {
-    margin-top: 30px;
-    width: 100%;
-    background-color: #ffffff;
-    color: #080710;
-    padding: 15px 0;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    box-shadow: 1px 1px 11px 8px #e7a83a;
-}
-
-
-
-.site-content {
-    height: 70%;
-}
-
-
-.thank-you {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.hidden {
-    display: none;
-}
-
-.selected-room{
-    background-color: #cfcbca;
+.reservation-cancelled {
+    color: red;
+    text-align: center;
 }
